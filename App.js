@@ -14,5 +14,6 @@ server.use(express.json());
 server.use('/personas', require('./routes/personas')); //si es que el cliente hace una peticion a persona, el servidor va a requerir o importar el archivo que esta en la carpeta router/personas
 server.use('/registros', require('./routes/registros'));
 server.use('/negocios', require('./routes/negocios'))
+server.use('/usuarios', require('./routes/usuarios'))
 
 module.exports=server;
