@@ -32,7 +32,6 @@ console.log(("Usuario consultado: "+req.params.email));
             console.log(err);
             return;
         }
-        console.log(result+" Antes")
         res.json(result);
         
     });
