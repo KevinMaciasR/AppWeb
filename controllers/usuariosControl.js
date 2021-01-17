@@ -23,7 +23,7 @@ console.log(("Usuario consultado: "+req.params.nombre));
         res.json(result);
     });
 }*/
-usuariosControl.getUsuario = (req,res)=>{ //usando Base de Datos, consulta con "email"
+usuariosControl.getUsuarioEma = (req,res)=>{ //usando Base de Datos, consulta con "email"
 console.log(("Usuario consultado: "+req.params.email));
     db.query('SELECT * FROM usuario WHERE email=?',req.params.email, 
     (err,result,fields)=>{
@@ -33,9 +33,11 @@ console.log(("Usuario consultado: "+req.params.email));
             return;
         }
         res.json(result);
+        console.log(result)
         
     });
 }
+
 usuariosControl.postUsuario = (req,res)=>{ //desde la Base de datos. Para Añadir Usuario
     const {nombre,email,contraseña} = req.body;
     if(!nombre || !email || !contraseña ){
