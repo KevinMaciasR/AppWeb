@@ -1,9 +1,9 @@
-const path =require('path')
+const path = require('path')
 const express = require('express');
-const cors=require('cors');
+const cors = require('cors');
 const server = express();
 //Configuraciones
-server.set('port',8080); 
+server.set('port', 8080);
 
 //Middlewares
 server.use(cors());
@@ -16,4 +16,4 @@ server.use('/registros', require('./routes/registros'));
 server.use('/negocios', require('./routes/negocios'))
 server.use('/usuarios', require('./routes/usuarios'))
 
-module.exports=server;
+module.exports = server;

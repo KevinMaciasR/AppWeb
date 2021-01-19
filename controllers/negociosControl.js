@@ -1,10 +1,10 @@
 const db = require('./database');
-const negociosControl={};
+const negociosControl = {};
 
 
-negociosControl.getNegocios = (req,res)=>{ //desde la Base de Datos
+negociosControl.getNegocios = (req, res) => { //desde la Base de Datos
     console.log("Esto en negocios")
-    db.query("Select * FROM negocio", (err,result,fields)=>{
+    db.query("Select * FROM negocio", (err, result, fields) => {
         if (err) {
             res.status(500).send(err);
             console.log(err);
@@ -13,4 +13,4 @@ negociosControl.getNegocios = (req,res)=>{ //desde la Base de Datos
         res.json(result);
     });
 }
-module.exports=negociosControl;
+module.exports = negociosControl;

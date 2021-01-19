@@ -1,2 +1,2 @@
-const data=require('./data.js');
-data.imprimir();
+/*const data=require('./data.js');
+data.imprimir();*/
